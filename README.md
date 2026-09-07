@@ -12,6 +12,8 @@ python -m venv venv
 2. CÀI ĐẶT CÁC THƯ VIỆN 
 pip install -r requirements.txt
 
+3. CHẠY DỰ ÁN
+python3 main.py
 
 ## Quy trình sử dụng (3 bước)
 
