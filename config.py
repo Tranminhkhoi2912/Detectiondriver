@@ -29,7 +29,7 @@ DROWSY_ALERT_FRAMES = 45      # ~1.5s liên tục -> cảnh báo mạnh (còi)
 MAR_THRESHOLD = 0.6
 YAWN_CONSEC_FRAMES = 15
 YAWN_COUNT_WINDOW_SEC = 60     # Đếm số lần ngáp trong 60s gần nhất
-YAWN_COUNT_ALERT = 3           # Ngáp >= 3 lần trong khoảng trên -> cảnh báo mệt mỏi
+YAWN_COUNT_ALERT = 1           # Ngáp >= 3 lần trong khoảng trên -> cảnh báo mệt mỏi
 
 # ==================== HEAD POSE (gục đầu) ====================
 ENABLE_HEAD_POSE = True
