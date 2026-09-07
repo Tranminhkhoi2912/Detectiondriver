@@ -106,8 +106,8 @@ drowsiness_detector/
 │   ├── alert_system.py         # Phát âm thanh cảnh báo (pygame)
 │   └── logger.py               # Ghi log CSV + snapshot (có thêm cột nguồn ML/RULE)
 ├── scripts/
-│   ├── collect_data.py         # [MỚI] Thu thập dữ liệu huấn luyện có nhãn thủ công
-│   └── train_model.py          # [MỚI] Huấn luyện + đánh giá model ML
+│   ├── collect_data.py         #  Thu thập dữ liệu huấn luyện có nhãn thủ công
+│   └── train_model.py          #  Huấn luyện + đánh giá model ML
 ├── data/
 │   └── training_data.csv        # [MỚI] Dữ liệu huấn luyện (sinh ra sau bước 1)
 ├── models/
@@ -190,4 +190,4 @@ lệnh xóa data train
 rm -f data/training_data.csv
 
 lệnh xóa hình ảnh snapshot
-rm -f logs/snapshots/*.jpg
+rm -f logs/snapshots/*.jpg# Detectiondriver
