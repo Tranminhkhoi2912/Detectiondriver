@@ -184,3 +184,8 @@ rm -f data/training_data.csv
 
 lệnh xóa hình ảnh snapshot
 rm -f logs/snapshots/*.jpg
+
+lệnh cập nhật code lên git
+git add .
+git commit 
+git push origin main
