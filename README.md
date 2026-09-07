@@ -1,26 +1,17 @@
-# Hệ thống nhận diện tài xế ngủ gật qua webcam (có Machine Learning tự train)
 
-Phát hiện dấu hiệu buồn ngủ/ngủ gật của tài xế theo thời gian thực bằng webcam,
-dựa trên: Eye Aspect Ratio (EAR), Mouth Aspect Ratio (MAR) và góc nghiêng đầu
-(head pose). Quyết định trạng thái mỗi frame do một **model Machine Learning
-tự huấn luyện** (RandomForestClassifier) đảm nhiệm, có fallback tự động về
-logic ngưỡng cố định (rule-based) khi chưa có model.
-
-## Điểm khác biệt so với bản gốc
-
-| | Bản gốc (rule-based) | Bản này |
-|---|---|---|
-| Quyết định "mắt nhắm/ngáp/gục đầu" | So sánh ngưỡng cố định (`if EAR < 0.21`) | **Model ML tự train** học ranh giới từ dữ liệu, fallback ngưỡng cố định nếu model chưa sẵn sàng/không đủ tin cậy |
-| Có bước huấn luyện | Không | **Có** (`scripts/collect_data.py` + `scripts/train_model.py`) |
-| Đánh giá định lượng | Không | Có: classification report, confusion matrix, cross-validation, feature importance |
 
 ## Cài đặt
+1. THIẾT LẬP MÔI TRƯỜNG ẢO 
+macos:
+python3.11 -m venv venv
+source venv/bin/activate
+window:
+python -m venv venv
+.\venv\Scripts\Activate
 
-```bash
+2. CÀI ĐẶT CÁC THƯ VIỆN 
 pip install -r requirements.txt
-```
 
-Yêu cầu: Python 3.9+, webcam.
 
 ## Quy trình sử dụng (3 bước)
 
@@ -190,4 +181,4 @@ lệnh xóa data train
 rm -f data/training_data.csv
 
 lệnh xóa hình ảnh snapshot
-rm -f logs/snapshots/*.jpg# Detectiondriver
+rm -f logs/snapshots/*.jpg
