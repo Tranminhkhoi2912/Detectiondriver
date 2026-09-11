@@ -143,21 +143,7 @@ Trong `config.py`:
 Các tham số ngưỡng rule-based cũ (`EAR_THRESHOLD`, `MAR_THRESHOLD`,
 `HEAD_PITCH_DROP_THRESHOLD`...) vẫn được giữ nguyên, dùng làm fallback.
 
-## Gợi ý viết báo cáo đồ án
 
-Phần Machine Learning trong dự án này phù hợp trình bày trong báo cáo với các mục:
-
-1. **Bài toán**: phân loại đa lớp (multi-class classification) từ 3 đặc trưng số.
-2. **Thu thập & gán nhãn dữ liệu**: mô tả quy trình thủ công ở `collect_data.py`,
-   nêu rõ số mẫu mỗi lớp, cách đảm bảo dữ liệu đa dạng (nhiều người/góc/ánh sáng).
-3. **Model & huấn luyện**: RandomForestClassifier, lý do lựa chọn, siêu tham số.
-4. **Đánh giá**: chèn `confusion_matrix.png`, bảng classification report,
-   điểm cross-validation, `feature_importance.png` kèm giải thích đặc trưng
-   nào quan trọng nhất.
-5. **So sánh với baseline rule-based**: có thể chạy cả 2 chế độ
-   (`config.USE_ML_MODEL = True/False`) trên cùng video test và so sánh số
-   lần cảnh báo đúng/sai (đặc biệt liên quan vấn đề `HEAD_DROP` hay báo động
-   giả do nhiễu `solvePnP`, đã quan sát được từ log thực tế của bản rule-based).
 
 ## Giới hạn & lưu ý khi triển khai thực tế
 
